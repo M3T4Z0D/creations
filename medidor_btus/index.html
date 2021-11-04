@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor</title>
+    <script defer src="https://kit.fontawesome.com/d34eda08bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="navegação principal">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <img src="https://bulma.io/images/bulma-logo.png" alt="logo" width="112" height="28">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            </div>
+            <div class="columns is-centered">                
+                <div class="column is-5-desktop">
+                    <form class="form">
+                        <div class="titulo">
+                            <h1 class="title">Qual ar-condicionado devo comprar?</h1>
+                            <h6 class="subtitle">Não fique mais em dúvida.</h6>
+                        </div>                        
+                        <hr>
+
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">O quarto tem muito incidência solar? </label>
+                                <label class="radio">
+                                    <input type="radio" name="question" value="Sim"> Sim
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="question" value="Não"> Não
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">M² do ambiente</label>
+                            <div class="control">
+                                <input type="text" id="tamanhoAmbiente" class="input" placeholder="Informe o tamanho do local em metros quadrados">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Quantidade de pessoas na área</label>
+                            <small>Informe quantas pessoas ficam no ambiente geralmente</small>
+                            <div class="control">
+                                <input type="text" name="quantidadePessoas" id="quantidadePessoas" class="input">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Quantidade de eletrônicos</label>
+                            <small>Informe a quantidade de aparelhos eletrônicos que ficam no ambiente</small>
+                            <div class="control">
+                                <input type="number" name="quantidadeEletronicos" id="quantidadeEletronicos" class="input" value="0">
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-link" id="enviar">Calcular</button>
+                            </div>
+                            <div class="control">
+                                <button class="button is-link is-light" id="cancelar">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
