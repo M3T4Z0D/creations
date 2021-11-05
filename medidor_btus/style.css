@@ -1,0 +1,9 @@
+html, #navbar{
+    background-color: #fafafa;
+}
+
+.column{
+    border: 1px solid #cccaca;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #cccaca;
+}
