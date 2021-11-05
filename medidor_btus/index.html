@@ -6,11 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medidor</title>
     <script defer src="https://kit.fontawesome.com/d34eda08bd.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="calculo.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer> 
+        $(document).ready(function() {
+            Calculo.init();
+        });
+    </script>
 </head>
 <body>
     <header>
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="navegação principal">
+        <nav class="navbar is-fixed-top" id="navbar" role="navigation" aria-label="navegação principal">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
                     <img src="https://bulma.io/images/bulma-logo.png" alt="logo" width="112" height="28">
@@ -24,7 +33,7 @@
             </div>
             <div class="columns is-centered">                
                 <div class="column is-5-desktop">
-                    <form class="form">
+                    <form class="form" id="form">
                         <div class="titulo">
                             <h1 class="title">Qual ar-condicionado devo comprar?</h1>
                             <h6 class="subtitle">Não fique mais em dúvida.</h6>
@@ -35,7 +44,7 @@
                             <div class="control">
                                 <label class="label">O quarto tem muito incidência solar? </label>
                                 <label class="radio">
-                                    <input type="radio" name="question" value="Sim"> Sim
+                                    <input type="radio" name="question" value="Sim" required> Sim
                                 </label>
                                 <label class="radio">
                                     <input type="radio" name="question" value="Não"> Não
@@ -45,8 +54,9 @@
 
                         <div class="field">
                             <label class="label">M² do ambiente</label>
+                            <small>Informe o tamanho do local em metros quadrados</small>
                             <div class="control">
-                                <input type="text" id="tamanhoAmbiente" class="input" placeholder="Informe o tamanho do local em metros quadrados">
+                                <input type="number" id="tamanhoAmbiente" min="0" class="input" value="0" required>
                             </div>
                         </div>
 
@@ -54,7 +64,7 @@
                             <label class="label">Quantidade de pessoas na área</label>
                             <small>Informe quantas pessoas ficam no ambiente geralmente</small>
                             <div class="control">
-                                <input type="text" name="quantidadePessoas" id="quantidadePessoas" class="input">
+                                <input type="number" name="quantidadePessoas" min="0" id="quantidadePessoas" class="input" value="0" required>
                             </div>
                         </div>
 
@@ -62,13 +72,13 @@
                             <label class="label">Quantidade de eletrônicos</label>
                             <small>Informe a quantidade de aparelhos eletrônicos que ficam no ambiente</small>
                             <div class="control">
-                                <input type="number" name="quantidadeEletronicos" id="quantidadeEletronicos" class="input" value="0">
+                                <input type="number" name="quantidadeEletronicos" min="0" id="quantidadeEletronicos" class="input" value="0" required>
                             </div>
                         </div>
 
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link" id="enviar">Calcular</button>
+                                <button type="submit" class="button is-link" id="enviar">Calcular</button>
                             </div>
                             <div class="control">
                                 <button class="button is-link is-light" id="cancelar">Cancelar</button>
