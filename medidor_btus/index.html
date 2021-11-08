@@ -10,7 +10,7 @@
     <script defer src="calculo.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="air-conditioner.png" type="image/x-icon">
     <script defer> 
         $(document).ready(function() {
             Calculo.init();
@@ -42,7 +42,7 @@
 
                         <div class="field">
                             <div class="control">
-                                <label class="label">O quarto tem muito incidência solar? </label>
+                                <label class="label">O quarto tem muita incidência solar? </label>
                                 <label class="radio">
                                     <input type="radio" name="question" value="Sim" required> Sim
                                 </label>
@@ -56,7 +56,7 @@
                             <label class="label">M² do ambiente</label>
                             <small>Informe o tamanho do local em metros quadrados</small>
                             <div class="control">
-                                <input type="number" id="tamanhoAmbiente" min="0" class="input" value="0" required>
+                                <input type="number" id="tamanhoAmbiente" min="0" class="input" required>
                             </div>
                         </div>
 
@@ -64,7 +64,7 @@
                             <label class="label">Quantidade de pessoas na área</label>
                             <small>Informe quantas pessoas ficam no ambiente geralmente</small>
                             <div class="control">
-                                <input type="number" name="quantidadePessoas" min="0" id="quantidadePessoas" class="input" value="0" required>
+                                <input type="number" name="quantidadePessoas" min="0" id="quantidadePessoas" class="input" required>
                             </div>
                         </div>
 
@@ -72,10 +72,10 @@
                             <label class="label">Quantidade de eletrônicos</label>
                             <small>Informe a quantidade de aparelhos eletrônicos que ficam no ambiente</small>
                             <div class="control">
-                                <input type="number" name="quantidadeEletronicos" min="0" id="quantidadeEletronicos" class="input" value="0" required>
+                                <input type="number" name="quantidadeEletronicos" min="0" id="quantidadeEletronicos" class="input" required>
                             </div>
                         </div>
-
+                        
                         <div class="field is-grouped">
                             <div class="control">
                                 <button type="submit" class="button is-link" id="enviar">Calcular</button>

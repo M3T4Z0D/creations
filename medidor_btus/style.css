@@ -2,6 +2,10 @@ html, #navbar{
     background-color: #fafafa;
 }
 
+#navbar{
+    border-bottom: 1px solid #cccaca;
+}
+
 .column{
     border: 1px solid #cccaca;
     border-radius: 10px;
